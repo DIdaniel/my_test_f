@@ -1,0 +1,254 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+.navigation-container {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    padding: 2rem 4rem;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.navigation-container p {
+    border-top: none;
+    border-left: 7px solid green;
+    border-right: 7px solid green;
+    border-bottom: none;
+    padding: 0 1.3rem 0 1.3rem;
+}
+
+.navigation-container a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.navigation-container a:hover {
+    color: rgb(95, 95, 95);
+}
+
+/* Carousel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container .slide-wrapper {
+    width: 400vw;
+    transition: 1s all;
+    overflow: hidden;
+}
+
+.carousel-container .slide-wrapper .slide {
+    width: 100vw;
+    float: left;
+}
+
+.carousel-container .slide-wrapper .slide img {
+    width: 100%;
+    height: 25rem;
+}
+
+.btn-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    transform: translate(0%, -50%);
+    opacity: 1;
+}
+
+.prev-btn,
+.next-btn {
+    background: none;
+    color: #fff;
+    font-size: 3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    color: rgb(218, 218, 218);
+}
+
+.prev-btn:active,
+.next-btn:active {
+    transform: translateY(2.5px);
+}
+
+/* Search container */
+.search-container {
+    max-width: 500px;
+    margin: 3rem auto 2rem;
+    overflow-x: hidden;
+}
+
+.search-input input {
+    height: 55px;
+    min-width: 30rem;
+    padding-left: 1.4rem;
+    outline: none;
+    border-top: 3px solid green;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid green;
+    font-size: 18px;
+}
+
+.search-input .auto-box {
+    display: none;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.search-input.focus .auto-box {
+    padding: 10px 8px;
+    opacity: 1;
+    border: 3px solid green;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: block;
+}
+
+.search-input .auto-box li {
+    list-style: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.search-input.active .auto-box li {
+    display: block;
+}
+
+.auto-box li:hover {
+    background: #efefef;
+    cursor: pointer;
+}
+
+/* Courses */
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.course-container .course-card {
+    border: 0.3rem solid #cccccc;
+    margin: 2em;
+    padding: 0.3em;
+    width: 23rem;
+
+    transition: 0.3s all;
+}
+
+.course-container .course-card:hover {
+    box-shadow: 0px 3px 7px rgb(31, 31, 31);
+    transform: translateY(-4.5px);
+}
+
+.course-container .course-card .course-card-image {
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.course-container .course-card .course-title,
+.course-container .course-card .course-instructor,
+.course-container .course-card .course-price {
+    margin: 0 0 2% 2%;
+    font-size: 1.1em;
+}
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 1em;
+    }
+
+    .navigation-container {
+        width: 80;
+    }
+
+    .navigation-container p {
+        font-size: 1.1rem;
+        font-size: bold;
+        padding: 1rem 0 1rem 0;
+        border-top: 4px solid tomato;
+        border-left: none;
+        border-right: none;
+        border-bottom: 4px solid dodgerblue;
+    }
+
+    .carousel-container {
+        display: none;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5rem auto 1rem;
+        max-width: 90%;
+    }
+
+    .search-input input {
+        padding-left: 1rem;
+        min-width: 29.5rem;
+    }
+
+    .search-input.focus {
+        width: 30.6rem;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 0.8em;
+    }
+
+    .navigation-container {
+        width: 80;
+    }
+
+    .navigation-container p {
+        font-size: 1.1rem;
+        font-size: bold;
+        padding: 1rem 0 1rem 0;
+        border-top: 4px solid tomato;
+        border-left: none;
+        border-right: none;
+        border-bottom: 4px solid dodgerblue;
+    }
+
+    .carousel-container {
+        display: none;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5rem auto 1rem;
+    }
+
+    .search-input input {
+        padding-left: 1rem;
+        min-width: 20rem;
+    }
+
+    .course-container .course-card {
+        width: 18rem;
+    }
+}

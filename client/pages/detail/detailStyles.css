@@ -1,0 +1,102 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Header */
+.navigation-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 4rem;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.navigation-container p {
+    border-top: none;
+    border-left: 7px solid green;
+    border-right: 7px solid green;
+    border-bottom: none;
+    padding: 0 1rem 0 1rem;
+}
+
+.navigation-container a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.navigation-container a:hover {
+    color: rgb(95, 95, 95);
+}
+
+.detail-container {
+    border: 6px solid #20c078;
+    border-radius: 10px;
+    max-width: 31.3rem;
+}
+
+.course-img {
+    width: fit-content;
+}
+
+.description {
+    padding: 0 1rem 0;
+    word-wrap: break-word;
+}
+
+span {
+    font-weight: bold;
+    font-size: 1.6vw;
+}
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 1em;
+    }
+
+    .navigation-container {
+        width: 80;
+    }
+
+    .navigation-container p {
+        font-size: 1.1rem;
+        font-size: bold;
+        padding: 1rem 0 1rem 0;
+        border-top: 4px solid tomato;
+        border-left: none;
+        border-right: none;
+        border-bottom: 4px solid dodgerblue;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 0.8em;
+    }
+
+    .navigation-container {
+        width: 80;
+    }
+
+    .navigation-container p {
+        font-size: 1.1rem;
+        font-size: bold;
+        padding: 1rem 0 1rem 0;
+        border-top: 4px solid tomato;
+        border-left: none;
+        border-right: none;
+        border-bottom: 4px solid dodgerblue;
+    }
+}
